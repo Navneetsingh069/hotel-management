@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+.navbar {
+    background-color: #6096B4; /* Set your desired navbar background color */
+    padding: 15px 0;
+    color: #EEE9DA; /* Set your desired text color */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-left: 20px;
+}
+
+.navbar nav ul {
+    list-style: none;
+    display: flex;
+}
+
+.navbar nav ul li {
+    margin-right: 20px;
+}
+
+.navbar nav ul li a {
+    text-decoration: none;
+    color: #fff; /* Set your desired navbar link color */
+}
+
+.hero-section {
+    width: 90%;
+    height: 300px;
+    margin: 20px auto;
+    background-image: url(park-hyatt-auckland\ \(12\).jpg);
+    background-position: center;
+    background-color: #3498db; /* Set your desired background color */
+    border-radius: 15px; /* Adjust the border-radius as needed */
+    overflow: hidden;
+}
+
+.hero-section .content {
+    padding: 50px;
+    color: #fff; /* Set your desired text color */
+    text-align: center;
+}
+
+.hero-section img {
+    max-width: 100%;
+    border-radius: 10px; /* Adjust the border-radius for the image as needed */
+}
+
+.hero-section h1 {
+    font-size: 2.5em;
+}
+
+.hero-section p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.hero-section a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #fff; /* Set your desired button background color */
+    color: #3498db; /* Set your desired button text color */
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+.container {
+      max-width: 100%;
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+
+    .mt-6 {
+      margin-top: 1.5rem;
+    }
+
+    /* Header styles */
+    .header {
+      border-bottom: 1px solid #e2e8f0;
+      background-color: #ffffff;
+      padding-bottom: 1rem;
+    }
+
+    .header .logo {
+      display: inline-flex;
+      align-items: center;
+      space-x: 2;
+    }
+
+    .header .logo svg {
+      width: 30px;
+      height: 30px;
+    }
+
+    .header .logo .brand-name {
+      font-weight: bold;
+    }
+
+    .header .nav {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .header .nav ul {
+      display: flex;
+      space-x: 8px;
+      list-style: none;
+    }
+
+    .header .nav a {
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: #333;
+      text-decoration: none;
+      transition: color 0.3s ease-in-out;
+    }
+
+    .header .nav a:hover {
+      color: #555;
+    }
+
+    .header .cta-button {
+      display: none;
+    }
+
+    @media (min-width: 768px) {
+      .header .cta-button {
+        display: block;
+      }
+
+      .header .nav {
+        display: none;
+      }
+    }
+
+    /* Hero section styles */
+    .hero {
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .hero .share-box {
+      max-width: max-content;
+      border-radius: 999px;
+      border: 1px solid #d2d6dc;
+      padding: 1px 10px;
+      background-color: #f8fafc;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 2rem;
+      font-weight: bold;
+      color: #333;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      max-width: 36rem;
+      margin-left: auto;
+      margin-right: auto;
+      font-size: 1rem;
+      color: #666;
+    }
+
+    /* Contact section styles */
+    .contact-section {
+      padding-top: 4rem;
+      padding-bottom: 6rem;
+    }
+
+    .contact-section .grid {
+      gap: 1rem;
+    }
+
+    .contact-section form {
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .contact-section label {
+      font-size: 0.875rem;
+      font-weight: medium;
+      color: #555;
+      margin-bottom: 0.5rem;
+      display: block;
+    }
+
+    .contact-section input,
+    .contact-section textarea {
+      width: 100%;
+      height: 2.5rem;
+      padding: 0.5rem;
+      margin-bottom: 1rem;
+      border: 1px solid #d2d6dc;
+      border-radius: 0.375rem;
+      background-color: #f8fafc;
+      font-size: 1rem;
+      color: #333;
+    }
+
+    .contact-section textarea {
+      resize: vertical;
+    }
+
+    .contact-section button {
+      width: 100%;
+      height: 2.5rem;
+      background-color: #000;
+      color: #fff;
+      border: none;
+      border-radius: 0.375rem;
+      font-size: 1rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s ease-in-out;
+    }
+
+    .contact-section button:hover {
+      background-color: #333;
+    }
+
+    /* Footer styles */
+    .footer {
+      overflow: hidden;
+      background-color: #f8fafc;
+      padding-top: 2rem;
+      padding-bottom: 2rem;
+    }
+
+    .footer .grid {
+      gap: 2rem;
+    }
+
+    .footer .logo {
+      display: flex;
+      align-items: center;
+      space-x: 2;
+    }
+
+    .footer .logo svg {
+      width: 24px;
+      height: 24px;
+    }
+
+    .footer .logo .brand-name {
+      font-weight: bold;
+    }
+
+    .footer p {
+      font-size: 0.875rem;
+      color: #666;
+      max-width: 28rem;
+    }
+
+    .footer ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .footer ul li {
+      margin-bottom: 0.5rem;
+    }
+
+    .footer a {
+      text-decoration: none;
+      color: #333;
+      transition: color 0.3s ease-in-out;
+    }
+
+    .footer a:hover {
+      color: #555;
+    }
+    body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        .container1 {
+            width: 90%;
+            height: 500px;
+            margin:  auto;
+            display: flex;
+            margin-top: 100px;
+            overflow: hidden;
+        }
+
+        .left-container {
+            flex: 1;
+        }
+
+        .right-container {
+            flex: 1;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+    </style>
+    <title>Your Website</title>
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="logo">
+            <a href="#">TheBlueGrace</a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Gallery</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Booking</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <header class="hero-section">
+        <div class="content">
+        
+        </div>
+    </header>
+    <div class="container1">
+        <div class="left-container">
+            <img src="caption (1).jpg" alt="Your Image">
+        </div>
+        <div class="right-container">
+            <p>Your content goes here.</p>
+        </div>
+    </div>
+    <section style="padding: 80px 0; background-color: #f8f8f8;">
+        <div style="margin: 0 auto; max-width: 1140px; padding: 0 20px;">
+          <div style="margin-bottom: 60px; max-width: 640px; text-align: center; margin: 0 auto;">
+            <h1 style="margin-bottom: 20px; font-size: 2.25rem; font-weight: bold; line-height: 1.25; color: #333;">
+              Lorem ipsum dolor sit amet consectetur.
+            </h1>
+            <p style="font-size: 1.125rem; color: #666;">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam, blanditiis.
+            </p>
+          </div>
+      
+          <div style="max-width: 900px; display: flex; flex-wrap: wrap; justify-content: space-between; margin: 0 auto;">
+            <!-- Container 1 -->
+            <div style="width: 100%; max-width: 280px; margin-bottom: 20px;">
+              <div style="border: 1px solid #ccc; border-radius: 0.375rem; background-color: #fff; padding: 20px;">
+                <!-- Image Section -->
+                <img src="your-image-url1.jpg" alt="Image 1" style="width: 100%; border-radius: 0.375rem; margin-bottom: 15px;">
+      
+                <span style="display: block; margin-bottom: 10px; font-size: 0.875rem; font-weight: bold; color: #333;">
+                  PREMIUM
+                </span>
+                <span style="display: flex; align-items: flex-end;">
+                  <span style="font-size: 2.5rem; font-weight: bold; line-height: 1; margin-right: 5px; color: #333;">
+                    $150
+                  </span>
+                  <span style="font-size: 0.875rem; font-weight: bold; color: #333;">
+                    /month
+                  </span>
+                </span>
+                <div style="margin-top: 20px; border-top: 1px solid #eee; padding-top: 20px;">
+                  <!-- List items omitted for brevity -->
+                  <button style="border: 1px solid #000; border-radius: 0.375rem; padding: 8px 15px; font-size: 0.875rem; font-weight: bold; color: #000; cursor: pointer;">
+                    Choose Plan
+                  </button>
+                </div>
+              </div>
+            </div>
+      
+            <!-- Container 2 -->
+            <div style="width: 100%; max-width: 280px; margin-bottom: 20px;">
+              <div style="border: 1px solid #000; border-radius: 0.375rem; background-color: #000; padding: 20px; position: relative;">
+                <!-- Image Section -->
+                <img src="your-image-url2.jpg" alt="Image 2" style="width: 100%; border-radius: 0.375rem; margin-bottom: 15px;">
+      
+                <div style="position: absolute; left: 50%; top: 0; transform: translate(-50%, -50%); background-color: #fff; border-radius: 50%; padding: 8px;">
+                  <div style="border-radius: 50%; background-color: #000; padding: 5px 20px; font-size: 0.875rem; font-weight: bold; text-transform: uppercase; color: #fff;">
+                    Most Popular
+                  </div>
+                </div>
+                <span style="display: block; margin-bottom: 10px; font-size: 0.875rem; font-weight: bold; color: #fff;">
+                  GOLD
+                </span>
+                <span style="display: flex; align-items: flex-end; color: #fff;">
+                  <span style="font-size: 2.5rem; font-weight: bold; line-height: 1; margin-right: 5px;">
+                    $100
+                  </span>
+                  <span style="font-size: 0.875rem; font-weight: bold;">
+                    /month
+                  </span>
+                </span>
+                <div style="margin-top: 20px; border-top: 1px solid #ff4500; padding-top: 20px;">
+                  <!-- List items omitted for brevity -->
+                  <button style="border: 1px solid #fff; border-radius: 0.375rem; padding: 8px 15px; font-size: 0.875rem; font-weight: bold; color: #fff; cursor: pointer; background-color: transparent; transition: background-color 0.3s;">
+                    Choose Plan
+                  </button>
+                </div>
+              </div>
+            </div>
+      
+            <!-- Container 3 -->
+            <div style="width: 100%; max-width: 280px;">
+              <div style="border: 1px solid #ccc; border-radius: 0.375rem; background-color: #fff; padding: 20px;">
+                <!-- Image Section -->
+                <img src="your-image-url3.jpg" alt="Image 3" style="width: 100%; border-radius: 0.375rem; margin-bottom: 15px;">
+      
+                <span style="display: block; margin-bottom: 10px; font-size: 0.875rem; font-weight: bold; color: #999;">
+                  PREMIUM
+                </span>
+                <span style="display: flex; align-items: flex-end;">
+                  <span style="font-size: 2.5rem; font-weight: bold; line-height: 1; margin-right: 5px; color: #333;">
+                    $150
+                  </span>
+                  <span style="font-size: 0.875rem; font-weight: bold; color: #333;">
+                    /month
+                  </span>
+                </span>
+                <div style="margin-top: 20px; border-top: 1px solid #eee; padding-top: 20px;">
+                  <!-- List items omitted for brevity -->
+                  <button style="border: 1px solid #000; border-radius: 0.375rem; padding: 8px 15px; font-size: 0.875rem; font-weight: bold; color: #000; cursor: pointer;">
+                    Choose Plan
+                  </button>
+                </div>
+              </div>
+            </div>
+      
+            <!-- Repeat similar HTML structure for other two containers -->
+      
+          </div>
+        </div>
+      </section>
+      
+      
+
+</body>
+</html>
