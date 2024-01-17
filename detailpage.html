@@ -1,58 +1,144 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title></title>
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-      <from>
-        <label for="date">Date:</label>
-        <input type="date" placeholder="dd/mm/yy" name="" value="">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-image: url('bg1.jpg'); /* Replace 'your-body-background-image.jpg' with the actual image path */
+            background-size: cover;
+            backdrop-filter: blur(10px);
+        }
 
-        <p>to</p>
+        .container {
+            display: flex;
+            width: 80%;
+            height: 80%;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        #box1 {
+            flex: 1;
+            padding: 20px;
+            box-sizing: border-box;
+            background-size: contain;
+            border: 1px solid grey;
+            border-radius: 10px;
+            margin: 0;
+            background-image: url('park-hyatt-auckland\ \(7\).jpg'); /* Replace 'your-box1-background-image.jpg' with the actual image path */
+            background-size: cover;
+            color: white; /* Adjust text color to be visible on the background image */
+        }
+
+        #box2 {
+            flex: 1;
+            background-color: white;
+            font-family: 'Josefin Sans', sans-serif;
+            padding: 20px;
+            box-sizing: border-box;
+            border: 1px solid grey;
+            border-radius: 10px;
+            margin: 0;
+            overflow-x: scroll;
+        }
+
+        /* Additional styles for the form inside the second box */
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input, button {
+            padding: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        #firstform{
+            display: flex;
+            gap: 20px;
+            align-items: end;
+        }
+        #firstincenter{
+            margin: 3px;
+        }
         
-        <label for="date">Date:</label>
-        <input type="date" placeholder="dd/mm/yy" name="" value="">
-        <br><br>
-        <label for="name">Name:</label>
-        <input type="name" placeholder="Name" name="" value="">
-        <br><br>
-        <label for="number">Phone number:</label>
-        <input type="number" placeholder="" name="" value="">
-        <br><br>
-        <label for="email">Email:</label>
-        <input type="email" placeholder="e-mail" name="" value="">
-        <br><br>
-        <label for="number">Number of person:</label>
-        <input type="number" placeholder="" name="" value="">
-        <br><br>
-        <label for="number">Under age person:</label>
-        <input type="number" placeholder="" name="" value="">
-        <br><br>
-        <label for="form">Room<label>
-        <input type="checkbox" id="form">  
-        <br>
-        <label for="ac room">Ac room</label>
-        <input type="radio" id="Ac room" name="Room">
-        <label for="non-ac room">Non-Ac room</label>
-        <input type="radio" id="Non-Ac room" name="Room">
-        <br><br>
-        <label for="form">Suite<label>
-        <input type="checkbox" id="form">  
-        <br><br>
-        <label for="form">Deluxe room<label>
-        <input type="checkbox" id="form">
-        <br><br>
-        <label for="form">Dorm<label>
-        <input type="checkbox" id="form">
-        <br>
-        <label for="number">4 Person</label>
-        <input type="radio" id="number" name="Room">
-        <label for="number">6 Person</label></label>
-        <input type="radio" id="number" name="Room">
-        <br><br>
-      
-        <button>Submit</button>
-  
-  </body>
+    </style>
+    <title>Styled Form</title>
+</head>
+<body>
+    <div class="container">
+        <div class="box" id="box1">Div 1</div>
+        <div class="box" id="box2">
+            <form>
+                <div id="firstform">
+                    <div class="firstone">
+
+                        <label for="startDate">Start Date:</label>
+                        <input type="date" id="startDate" name="startDate" placeholder="dd/mm/yy" value="">
+                    </div>
+    
+                    <div id="firstincenter">To</div>
+                <div class="secoundone">
+
+                    <label for="endDate">End Date:</label>
+                    <input type="date" id="endDate" name="endDate" placeholder="dd/mm/yy" value="">
+                </div>
+            </div>
+                <label for="name">Name:</label>
+                <input type="name" id="name" name="name" placeholder="Name" value="">
+                
+                <label for="phoneNumber">Phone number:</label>
+                <input type="number" id="phoneNumber" name="phoneNumber" placeholder="" value="">
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="e-mail" value="">
+                
+                <label for="numOfPersons">Number of persons:</label>
+                <input type="number" id="numOfPersons" name="numOfPersons" placeholder="" value="">
+                
+                <label for="underagePersons">Underage persons:</label>
+                <input type="number" id="underagePersons" name="underagePersons" placeholder="" value="">
+                
+                <!-- Checkbox and radio inputs as per your form -->
+                <label for="room-type">Room type:</label>
+<select id="room-type" name="room-type">
+    <option value="ac-room">Ac room</option>
+    <option value="non-ac-room">Non-Ac room</option>
+    <option value="form-suite">Suite</option>
+    <option value="form-deluxe">Deluxe room</option>
+    <option value="form-dorm">Dorm</option>
+</select>
+
+<label for="num-of-persons">Number of persons:</label>
+<input type="number" id="num-of-persons" name="num-of-persons" placeholder="" value="">
+
+<label for="room-type">Room type:</label>
+<select id="room-type" name="room-type">
+    <option value="room-type-4-person">4 Person</option>
+    <option value="room-type-6-person">6 Person</option>
+</select>
+
+    
+                
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+</body>
 </html>
